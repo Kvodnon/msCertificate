@@ -110,8 +110,8 @@ msCertificate.utils.resourceLink = function (value, id, blank) {
             id: id
         },
         listeners: {
-            'success': {fn:
-                function(r) {
+            success: {
+                fn: function(r) {
                     if (r.success) {
                         console.log(r.object.pagetitle);
                         return String.format(
@@ -121,8 +121,7 @@ msCertificate.utils.resourceLink = function (value, id, blank) {
                             r.object.pagetitle
                         );
                     }
-                },
-                scope:this
+                }, scope:this
             }
         }
     });

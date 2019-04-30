@@ -21,13 +21,13 @@ msCertificate.panel.Home = function (config) {
             border: true,
             hideMode: 'offsets',
             items: [{
-                title: _('msc_items'),
+                title: _('msc_certificate'),
                 layout: 'anchor',
                 items: [{
                     html: _('msc_intro_msg'),
                     cls: 'panel-desc',
                 }, {
-                    xtype: 'msc-grid-items',
+                    xtype: 'msc-grid-certificates',
                     cls: 'main-wrapper',
                 }]
             }]

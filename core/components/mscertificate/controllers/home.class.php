@@ -56,8 +56,8 @@ class msCertificateHomeManagerController extends modExtraManagerController
         $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/mscertificate.js');
         $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/misc/utils.js');
         $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/misc/combo.js');
-        $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/widgets/items.grid.js');
-        $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/widgets/items.windows.js');
+        $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/widgets/certificates.grid.js');
+        $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/widgets/certificates.windows.js');
         $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/widgets/home.panel.js');
         $this->addJavascript($this->msCertificate->config['jsUrl'] . 'mgr/sections/home.js');
 
