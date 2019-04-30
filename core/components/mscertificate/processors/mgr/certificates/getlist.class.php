@@ -31,12 +31,16 @@ class mscCertificatesGetListProcessor extends modObjectGetListProcessor
      * @return xPDOQuery
      */
     public function prepareQueryBeforeCount(xPDOQuery $c)
-    {
+    {        
         $query = trim($this->getProperty('query'));
+
+		$c->leftJoin('modResource', 'modResource', array('modResource.id = mscCertificate.resource_id'));
+		$c->select(array($this->modx->getSelectColumns('modResource', 'modResource')));
+        $c->select(array('modResource.pagetitle as name'));
+        
         if ($query) {
             $c->where([
-                'name:LIKE' => "%{$query}%",
-                'OR:description:LIKE' => "%{$query}%",
+                'name:LIKE' => "%{$query}%"
             ]);
         }
 

@@ -99,31 +99,14 @@ msCertificate.utils.renderActions = function (value, props, row) {
 };
 
 msCertificate.utils.resourceLink = function (value, id, blank) {
-    if(!id) {
-        return '';
+    if(!value) {
+        return result;
     }
 
-    MODx.Ajax.request({
-        url: MODx.config.connector_url,
-        params: {
-            action: 'resource/get',
-            id: id
-        },
-        listeners: {
-            success: {
-                fn: function(r) {
-                    if (r.success) {
-                        console.log(r.object.pagetitle);
-                        return String.format(
-                            '<a href="index.php?a=resource/update&id={0}" class="msc-link" target="{1}">{2}</a>',
-                            id,
-                            (blank ? '_blank' : '_self'),
-                            r.object.pagetitle
-                        );
-                    }
-                }, scope:this
-            }
-        }
-    });
-
+    return String.format(
+        '<a href="index.php?a=resource/update&id={0}" class="msc-link" target="{1}">{2}</a>',
+        id,
+        (blank ? '_blank' : '_self'),
+        value
+    );
 };

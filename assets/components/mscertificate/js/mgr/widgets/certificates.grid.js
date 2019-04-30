@@ -6,16 +6,7 @@ msCertificate.grid.Certificates = function (config) {
     Ext.applyIf(config, {
         url: msCertificate.config.connector_url,
         fields: this.getFields(config),
-        columns: {
-            id: {hidden: true},
-            resource_id: {hidden: true},
-			name: {
-                header: _('msc_certificate_name'),
-                renderer: function (value, metaData, record) {
-                    return msCertificate.utils.resourceLink(value, record['data']['resource_id']);
-                }
-            },
-		},
+        columns: this.getColumns(config),
         tbar: this.getTopBar(config),
         sm: new Ext.grid.CheckboxSelectionModel(),
         baseParams: {
@@ -201,7 +192,7 @@ Ext.extend(msCertificate.grid.Certificates, MODx.grid.Grid, {
 			name: {
                 header: _('msc_certificate_name'),
                 renderer: function (value, metaData, record) {
-                    return msCertificate.utils.resourceLink(value, record['data']['resource_id']);
+                    return msCertificate.utils.resourceLink(value, record['data']['id']);
                 }
             },
 		};
