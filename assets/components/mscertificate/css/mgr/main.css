@@ -1,0 +1,96 @@
+/* Grid */
+.mscertificate-mscertificate-row-disabled { font-style: italic; opacity: .6; color: #555; }
+.x-grid3-col-actions { padding: 3px 0 3px 5px; }
+
+/* Actions */
+.action-red { color: darkred !important; }
+.action-green { color: darkgreen !important; }
+.action-blue { color: cadetblue !important; }
+.action-yellow { color: goldenrod !important; }
+.action-gray { color: dimgray !important; }
+ul.mscertificate-row-actions { margin: 0; padding: 0; list-style: none; }
+ul.mscertificate-row-actions li { float: left; }
+ul.mscertificate-row-actions .mscertificate-btn { padding: 5px; margin-right: 2px; min-width: 26px; font-size: inherit; }
+
+/* Action menu */
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon { cursor: pointer; }
+a.x-menu-item .x-menu-item-text .icon { line-height: 16px; top: auto; }
+.x-menu-list .icon { min-width: 1em; text-align: center; }
+.x-menu-list-item:hover .icon { color: inherit !important; }
+ul.mscertificate-row-actions .actions-menu { width: 40px; }
+ul.mscertificate-row-actions .actions-menu:after { content: " \f107"; }
+
+/* Search field */
+.x-field-search-clear,
+.x-field-search-go { border-left: 1px solid #e4e4e4 !important; }
+.x-field-search-clear:hover,
+.x-field-search-go:hover { border-left-color: transparent !important; }
+.x-field-search-clear:before { content: '\f00d' !important; }
+.x-field-search-go { right: 31px !important; border-radius: 0 !important; }
+.x-field-search-go:before { content: '\f002' !important; }
+
+/* Buttons */
+.mscertificate-btn { display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+.mscertificate-btn:focus, .mscertificate-btn:active:focus, .mscertificate-btn.active:focus, .mscertificate-btn.focus, .mscertificate-btn:active.focus, .mscertificate-btn.active.focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px }
+.mscertificate-btn:hover, .mscertificate-btn:focus, .mscertificate-btn.focus { color: #333; text-decoration: none }
+.mscertificate-btn:active, .mscertificate-btn.active { outline: 0; background-image: none; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) }
+.mscertificate-btn.disabled, .mscertificate-btn[disabled], fieldset[disabled] .mscertificate-btn { cursor: not-allowed; opacity: .65; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none }
+a.mscertificate-btn.disabled, fieldset[disabled] a.mscertificate-btn { pointer-events: none }
+.mscertificate-btn-default { color: #333; background-color: #fff; border-color: #ccc }
+.mscertificate-btn-default:focus, .mscertificate-btn-default.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c }
+.mscertificate-btn-default:hover { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.mscertificate-btn-default:active, .mscertificate-btn-default.active, .open > .dropdown-toggle.mscertificate-btn-default { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.mscertificate-btn-default:active:hover, .mscertificate-btn-default.active:hover, .open > .dropdown-toggle.mscertificate-btn-default:hover, .mscertificate-btn-default:active:focus, .mscertificate-btn-default.active:focus, .open > .dropdown-toggle.mscertificate-btn-default:focus, .mscertificate-btn-default:active.focus, .mscertificate-btn-default.active.focus, .open > .dropdown-toggle.mscertificate-btn-default.focus { color: #333; background-color: #d4d4d4; border-color: #8c8c8c }
+.mscertificate-btn-default:active, .mscertificate-btn-default.active, .open > .dropdown-toggle.mscertificate-btn-default { background-image: none }
+.mscertificate-btn-default.disabled:hover, .mscertificate-btn-default[disabled]:hover, fieldset[disabled] .mscertificate-btn-default:hover, .mscertificate-btn-default.disabled:focus, .mscertificate-btn-default[disabled]:focus, fieldset[disabled] .mscertificate-btn-default:focus, .mscertificate-btn-default.disabled.focus, .mscertificate-btn-default[disabled].focus, fieldset[disabled] .mscertificate-btn-default.focus { background-color: #fff; border-color: #ccc }
+.mscertificate-btn-default .badge { color: #fff; background-color: #333 }
+.mscertificate-btn-primary { color: #fff; background-color: #337ab7; border-color: #2e6da4 }
+.mscertificate-btn-primary:focus, .mscertificate-btn-primary.focus { color: #fff; background-color: #286090; border-color: #122b40 }
+.mscertificate-btn-primary:hover { color: #fff; background-color: #286090; border-color: #204d74 }
+.mscertificate-btn-primary:active, .mscertificate-btn-primary.active, .open > .dropdown-toggle.mscertificate-btn-primary { color: #fff; background-color: #286090; border-color: #204d74 }
+.mscertificate-btn-primary:active:hover, .mscertificate-btn-primary.active:hover, .open > .dropdown-toggle.mscertificate-btn-primary:hover, .mscertificate-btn-primary:active:focus, .mscertificate-btn-primary.active:focus, .open > .dropdown-toggle.mscertificate-btn-primary:focus, .mscertificate-btn-primary:active.focus, .mscertificate-btn-primary.active.focus, .open > .dropdown-toggle.mscertificate-btn-primary.focus { color: #fff; background-color: #204d74; border-color: #122b40 }
+.mscertificate-btn-primary:active, .mscertificate-btn-primary.active, .open > .dropdown-toggle.mscertificate-btn-primary { background-image: none }
+.mscertificate-btn-primary.disabled:hover, .mscertificate-btn-primary[disabled]:hover, fieldset[disabled] .mscertificate-btn-primary:hover, .mscertificate-btn-primary.disabled:focus, .mscertificate-btn-primary[disabled]:focus, fieldset[disabled] .mscertificate-btn-primary:focus, .mscertificate-btn-primary.disabled.focus, .mscertificate-btn-primary[disabled].focus, fieldset[disabled] .mscertificate-btn-primary.focus { background-color: #337ab7; border-color: #2e6da4 }
+.mscertificate-btn-primary .badge { color: #337ab7; background-color: #fff }
+.mscertificate-btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c }
+.mscertificate-btn-success:focus, .mscertificate-btn-success.focus { color: #fff; background-color: #449d44; border-color: #255625 }
+.mscertificate-btn-success:hover { color: #fff; background-color: #449d44; border-color: #398439 }
+.mscertificate-btn-success:active, .mscertificate-btn-success.active, .open > .dropdown-toggle.mscertificate-btn-success { color: #fff; background-color: #449d44; border-color: #398439 }
+.mscertificate-btn-success:active:hover, .mscertificate-btn-success.active:hover, .open > .dropdown-toggle.mscertificate-btn-success:hover, .mscertificate-btn-success:active:focus, .mscertificate-btn-success.active:focus, .open > .dropdown-toggle.mscertificate-btn-success:focus, .mscertificate-btn-success:active.focus, .mscertificate-btn-success.active.focus, .open > .dropdown-toggle.mscertificate-btn-success.focus { color: #fff; background-color: #398439; border-color: #255625 }
+.mscertificate-btn-success:active, .mscertificate-btn-success.active, .open > .dropdown-toggle.mscertificate-btn-success { background-image: none }
+.mscertificate-btn-success.disabled:hover, .mscertificate-btn-success[disabled]:hover, fieldset[disabled] .mscertificate-btn-success:hover, .mscertificate-btn-success.disabled:focus, .mscertificate-btn-success[disabled]:focus, fieldset[disabled] .mscertificate-btn-success:focus, .mscertificate-btn-success.disabled.focus, .mscertificate-btn-success[disabled].focus, fieldset[disabled] .mscertificate-btn-success.focus { background-color: #5cb85c; border-color: #4cae4c }
+.mscertificate-btn-success .badge { color: #5cb85c; background-color: #fff }
+.mscertificate-btn-info { color: #fff; background-color: #5bc0de; border-color: #46b8da }
+.mscertificate-btn-info:focus, .mscertificate-btn-info.focus { color: #fff; background-color: #31b0d5; border-color: #1b6d85 }
+.mscertificate-btn-info:hover { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.mscertificate-btn-info:active, .mscertificate-btn-info.active, .open > .dropdown-toggle.mscertificate-btn-info { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.mscertificate-btn-info:active:hover, .mscertificate-btn-info.active:hover, .open > .dropdown-toggle.mscertificate-btn-info:hover, .mscertificate-btn-info:active:focus, .mscertificate-btn-info.active:focus, .open > .dropdown-toggle.mscertificate-btn-info:focus, .mscertificate-btn-info:active.focus, .mscertificate-btn-info.active.focus, .open > .dropdown-toggle.mscertificate-btn-info.focus { color: #fff; background-color: #269abc; border-color: #1b6d85 }
+.mscertificate-btn-info:active, .mscertificate-btn-info.active, .open > .dropdown-toggle.mscertificate-btn-info { background-image: none }
+.mscertificate-btn-info.disabled:hover, .mscertificate-btn-info[disabled]:hover, fieldset[disabled] .mscertificate-btn-info:hover, .mscertificate-btn-info.disabled:focus, .mscertificate-btn-info[disabled]:focus, fieldset[disabled] .mscertificate-btn-info:focus, .mscertificate-btn-info.disabled.focus, .mscertificate-btn-info[disabled].focus, fieldset[disabled] .mscertificate-btn-info.focus { background-color: #5bc0de; border-color: #46b8da }
+.mscertificate-btn-info .badge { color: #5bc0de; background-color: #fff }
+.mscertificate-btn-warning { color: #fff; background-color: #f0ad4e; border-color: #eea236 }
+.mscertificate-btn-warning:focus, .mscertificate-btn-warning.focus { color: #fff; background-color: #ec971f; border-color: #985f0d }
+.mscertificate-btn-warning:hover { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.mscertificate-btn-warning:active, .mscertificate-btn-warning.active, .open > .dropdown-toggle.mscertificate-btn-warning { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.mscertificate-btn-warning:active:hover, .mscertificate-btn-warning.active:hover, .open > .dropdown-toggle.mscertificate-btn-warning:hover, .mscertificate-btn-warning:active:focus, .mscertificate-btn-warning.active:focus, .open > .dropdown-toggle.mscertificate-btn-warning:focus, .mscertificate-btn-warning:active.focus, .mscertificate-btn-warning.active.focus, .open > .dropdown-toggle.mscertificate-btn-warning.focus { color: #fff; background-color: #d58512; border-color: #985f0d }
+.mscertificate-btn-warning:active, .mscertificate-btn-warning.active, .open > .dropdown-toggle.mscertificate-btn-warning { background-image: none }
+.mscertificate-btn-warning.disabled:hover, .mscertificate-btn-warning[disabled]:hover, fieldset[disabled] .mscertificate-btn-warning:hover, .mscertificate-btn-warning.disabled:focus, .mscertificate-btn-warning[disabled]:focus, fieldset[disabled] .mscertificate-btn-warning:focus, .mscertificate-btn-warning.disabled.focus, .mscertificate-btn-warning[disabled].focus, fieldset[disabled] .mscertificate-btn-warning.focus { background-color: #f0ad4e; border-color: #eea236 }
+.mscertificate-btn-warning .badge { color: #f0ad4e; background-color: #fff }
+.mscertificate-btn-danger { color: #fff; background-color: #d9534f; border-color: #d43f3a }
+.mscertificate-btn-danger:focus, .mscertificate-btn-danger.focus { color: #fff; background-color: #c9302c; border-color: #761c19 }
+.mscertificate-btn-danger:hover { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.mscertificate-btn-danger:active, .mscertificate-btn-danger.active, .open > .dropdown-toggle.mscertificate-btn-danger { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.mscertificate-btn-danger:active:hover, .mscertificate-btn-danger.active:hover, .open > .dropdown-toggle.mscertificate-btn-danger:hover, .mscertificate-btn-danger:active:focus, .mscertificate-btn-danger.active:focus, .open > .dropdown-toggle.mscertificate-btn-danger:focus, .mscertificate-btn-danger:active.focus, .mscertificate-btn-danger.active.focus, .open > .dropdown-toggle.mscertificate-btn-danger.focus { color: #fff; background-color: #ac2925; border-color: #761c19 }
+.mscertificate-btn-danger:active, .mscertificate-btn-danger.active, .open > .dropdown-toggle.mscertificate-btn-danger { background-image: none }
+.mscertificate-btn-danger.disabled:hover, .mscertificate-btn-danger[disabled]:hover, fieldset[disabled] .mscertificate-btn-danger:hover, .mscertificate-btn-danger.disabled:focus, .mscertificate-btn-danger[disabled]:focus, fieldset[disabled] .mscertificate-btn-danger:focus, .mscertificate-btn-danger.disabled.focus, .mscertificate-btn-danger[disabled].focus, fieldset[disabled] .mscertificate-btn-danger.focus { background-color: #d9534f; border-color: #d43f3a }
+.mscertificate-btn-danger .badge { color: #d9534f; background-color: #fff }
+.mscertificate-btn-link { color: #337ab7; font-weight: normal; border-radius: 0 }
+.mscertificate-btn-link, .mscertificate-btn-link:active, .mscertificate-btn-link.active, .mscertificate-btn-link[disabled], fieldset[disabled] .mscertificate-btn-link { background-color: transparent; -webkit-box-shadow: none; box-shadow: none }
+.mscertificate-btn-link, .mscertificate-btn-link:hover, .mscertificate-btn-link:focus, .mscertificate-btn-link:active { border-color: transparent }
+.mscertificate-btn-link:hover, .mscertificate-btn-link:focus { color: #23527c; text-decoration: underline; background-color: transparent }
+.mscertificate-btn-link[disabled]:hover, fieldset[disabled] .mscertificate-btn-link:hover, .mscertificate-btn-link[disabled]:focus, fieldset[disabled] .mscertificate-btn-link:focus { color: #777; text-decoration: none }
+.mscertificate-btn-lg { padding: 10px 16px; font-size: 18px; line-height: 1.3333333; border-radius: 6px }
+.mscertificate-btn-sm { padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.mscertificate-btn-xs { padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.mscertificate-btn-block { display: block; width: 100% }
+.mscertificate-btn-block + .mscertificate-btn-block { margin-top: 5px }

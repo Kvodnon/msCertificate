@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'modExtra' => [
-        'file' => 'modextra',
+    'msCertificate' => [
+        'file' => 'mscertificate',
         'description' => '',
         'events' => [
             'OnManagerPageInit' => [],

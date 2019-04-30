@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'tpl.modExtra.item' => [
+    'tpl.msCertificate.item' => [
         'file' => 'item',
         'description' => '',
     ],
-    'tpl.modExtra.office' => [
+    'tpl.msCertificate.office' => [
         'file' => 'office',
         'description' => '',
     ],

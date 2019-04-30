@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'modExtra' => [
+    'msCertificate' => [
         'description' => '',
         'type' => 'file',
         'content' => '',
-        'namespace' => 'modextra',
-        'lexicon' => 'modextra:dashboards',
+        'namespace' => 'mscertificate',
+        'lexicon' => 'mscertificate:dashboards',
         'size' => 'half',
     ],
 ];

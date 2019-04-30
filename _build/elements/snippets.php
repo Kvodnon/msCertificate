@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'modExtra' => [
-        'file' => 'modextra',
-        'description' => 'modExtra snippet to list items',
+    'msCertificate' => [
+        'file' => 'mscertificate',
+        'description' => 'msCertificate snippet to list items',
         'properties' => [
             'tpl' => [
                 'type' => 'textfield',
-                'value' => 'tpl.modExtra.item',
+                'value' => 'tpl.msCertificate.item',
             ],
             'sortby' => [
                 'type' => 'textfield',
