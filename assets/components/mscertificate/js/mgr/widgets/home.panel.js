@@ -12,7 +12,7 @@ msCertificate.panel.Home = function (config) {
          */
         hideMode: 'offsets',
         items: [{
-            html: '<h2>' + _('mscertificate') + '</h2>',
+            html: '<h2>' + _('msc') + '</h2>',
             cls: '',
             style: {margin: '15px 0'}
         }, {
@@ -21,13 +21,13 @@ msCertificate.panel.Home = function (config) {
             border: true,
             hideMode: 'offsets',
             items: [{
-                title: _('mscertificate_items'),
+                title: _('msc_items'),
                 layout: 'anchor',
                 items: [{
-                    html: _('mscertificate_intro_msg'),
+                    html: _('msc_intro_msg'),
                     cls: 'panel-desc',
                 }, {
-                    xtype: 'mscertificate-grid-items',
+                    xtype: 'msc-grid-items',
                     cls: 'main-wrapper',
                 }]
             }]
@@ -36,4 +36,4 @@ msCertificate.panel.Home = function (config) {
     msCertificate.panel.Home.superclass.constructor.call(this, config);
 };
 Ext.extend(msCertificate.panel.Home, MODx.Panel);
-Ext.reg('mscertificate-panel-home', msCertificate.panel.Home);
+Ext.reg('msc-panel-home', msCertificate.panel.Home);

@@ -43,7 +43,7 @@ class msCertificateHomeManagerController extends modExtraManagerController
      */
     public function getPageTitle()
     {
-        return $this->modx->lexicon('mscertificate');
+        return $this->modx->lexicon('msc');
     }
 
 
@@ -64,7 +64,9 @@ class msCertificateHomeManagerController extends modExtraManagerController
         $this->addHtml('<script type="text/javascript">
         msCertificate.config = ' . json_encode($this->msCertificate->config) . ';
         msCertificate.config.connector_url = "' . $this->msCertificate->config['connectorUrl'] . '";
-        Ext.onReady(function() {MODx.load({ xtype: "mscertificate-page-home"});});
+        Ext.onReady(function() {
+            MODx.load({ xtype: "msc-page-home"});
+        });
         </script>');
     }
 
@@ -74,7 +76,7 @@ class msCertificateHomeManagerController extends modExtraManagerController
      */
     public function getTemplateFile()
     {
-        $this->content .= '<div id="mscertificate-panel-home-div"></div>';
+        $this->content .= '<div id="msc-panel-home-div"></div>';
 
         return '';
     }

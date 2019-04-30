@@ -1,17 +1,17 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['msc'] = 'msCertificate';
-$_lang['msc_menu_desc'] = 'Ваши подарочные сертификаты';
-$_lang['msc_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
+$_lang['msc'] = 'Подарочные сертификаты';
+$_lang['msc_menu_desc'] = 'Управление подарочными сертификатами';
+$_lang['msc_intro_msg'] = 'Здесь Вы создаёте сертификаты и указываете их штрихкоды.';
 
-$_lang['msc_items'] = 'Предметы';
+$_lang['msc_items'] = 'Сертификаты';
 $_lang['msc_item_id'] = 'Id';
 $_lang['msc_item_name'] = 'Название';
 $_lang['msc_item_description'] = 'Описание';
 $_lang['msc_item_active'] = 'Активно';
 
-$_lang['msc_item_create'] = 'Создать предмет';
+$_lang['msc_item_create'] = 'Создать сертификат';
 $_lang['msc_item_update'] = 'Изменить Предмет';
 $_lang['msc_item_enable'] = 'Включить Предмет';
 $_lang['msc_items_enable'] = 'Включить Предметы';

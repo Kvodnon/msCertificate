@@ -1,7 +1,7 @@
 msCertificate.grid.Items = function (config) {
     config = config || {};
     if (!config.id) {
-        config.id = 'mscertificate-grid-items';
+        config.id = 'msc-grid-items';
     }
     Ext.applyIf(config, {
         url: msCertificate.config.connector_url,
@@ -10,7 +10,7 @@ msCertificate.grid.Items = function (config) {
         tbar: this.getTopBar(config),
         sm: new Ext.grid.CheckboxSelectionModel(),
         baseParams: {
-            action: 'mgr/item/getlist'
+            action: 'mgr/certificates/getlist'
         },
         listeners: {
             rowDblClick: function (grid, rowIndex, e) {
@@ -26,7 +26,7 @@ msCertificate.grid.Items = function (config) {
             scrollOffset: 0,
             getRowClass: function (rec) {
                 return !rec.data.active
-                    ? 'mscertificate-grid-row-disabled'
+                    ? 'msc-grid-row-disabled'
                     : '';
             }
         },
@@ -57,7 +57,7 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
 
     createItem: function (btn, e) {
         var w = MODx.load({
-            xtype: 'mscertificate-item-window-create',
+            xtype: 'msc-item-window-create',
             id: Ext.id(),
             listeners: {
                 success: {
@@ -84,14 +84,14 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
         MODx.Ajax.request({
             url: this.config.url,
             params: {
-                action: 'mgr/item/get',
+                action: 'mgr/certificates/get',
                 id: id
             },
             listeners: {
                 success: {
                     fn: function (r) {
                         var w = MODx.load({
-                            xtype: 'mscertificate-item-window-update',
+                            xtype: 'msc-item-window-update',
                             id: Ext.id(),
                             record: r,
                             listeners: {
@@ -118,14 +118,14 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
         }
         MODx.msg.confirm({
             title: ids.length > 1
-                ? _('mscertificate_items_remove')
-                : _('mscertificate_item_remove'),
+                ? _('msc_items_remove')
+                : _('msc_item_remove'),
             text: ids.length > 1
-                ? _('mscertificate_items_remove_confirm')
-                : _('mscertificate_item_remove_confirm'),
+                ? _('msc_items_remove_confirm')
+                : _('msc_item_remove_confirm'),
             url: this.config.url,
             params: {
-                action: 'mgr/item/remove',
+                action: 'mgr/certificates/remove',
                 ids: Ext.util.JSON.encode(ids),
             },
             listeners: {
@@ -147,7 +147,7 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
         MODx.Ajax.request({
             url: this.config.url,
             params: {
-                action: 'mgr/item/disable',
+                action: 'mgr/certificates/disable',
                 ids: Ext.util.JSON.encode(ids),
             },
             listeners: {
@@ -168,7 +168,7 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
         MODx.Ajax.request({
             url: this.config.url,
             params: {
-                action: 'mgr/item/enable',
+                action: 'mgr/certificates/enable',
                 ids: Ext.util.JSON.encode(ids),
             },
             listeners: {
@@ -182,48 +182,40 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
     },
 
     getFields: function () {
-        return ['id', 'name', 'description', 'active', 'actions'];
+        return ['id', 'resource_id', 'name'];
     },
 
     getColumns: function () {
-        return [{
-            header: _('mscertificate_item_id'),
-            dataIndex: 'id',
-            sortable: true,
-            width: 70
-        }, {
-            header: _('mscertificate_item_name'),
-            dataIndex: 'name',
-            sortable: true,
-            width: 200,
-        }, {
-            header: _('mscertificate_item_description'),
-            dataIndex: 'description',
-            sortable: false,
-            width: 250,
-        }, {
-            header: _('mscertificate_item_active'),
-            dataIndex: 'active',
-            renderer: msCertificate.utils.renderBoolean,
-            sortable: true,
-            width: 100,
-        }, {
-            header: _('mscertificate_grid_actions'),
-            dataIndex: 'actions',
-            renderer: msCertificate.utils.renderActions,
-            sortable: false,
-            width: 100,
-            id: 'actions'
-        }];
+        var columns = {
+            id: {hidden: true},
+            resource_id: {hidden: true},
+			name: {
+                header: _('msc_item_name'),
+                renderer: function (value, metaData, record) {
+                    return msCertificate.utils.resourceLink(value, record['data']['resource_id']);
+                }
+            },
+		};
+		var tmp = [];
+		for (var i in columns) {
+			if (columns.hasOwnProperty(i)) {
+				Ext.applyIf(columns[i], {
+					header: _('msd_group_' + i),
+					dataIndex: i
+				});
+				tmp.push(columns[i]);
+			}
+		}
+		return tmp;
     },
 
     getTopBar: function () {
         return [{
-            text: '<i class="icon icon-plus"></i>&nbsp;' + _('mscertificate_item_create'),
+            text: '<i class="icon icon-plus"></i>&nbsp;' + _('msc_item_create'),
             handler: this.createItem,
             scope: this
         }, '->', {
-            xtype: 'mscertificate-field-search',
+            xtype: 'msc-field-search',
             width: 250,
             listeners: {
                 search: {
@@ -284,4 +276,4 @@ Ext.extend(msCertificate.grid.Items, MODx.grid.Grid, {
         this.getBottomToolbar().changePage(1);
     },
 });
-Ext.reg('mscertificate-grid-items', msCertificate.grid.Items);
+Ext.reg('msc-grid-items', msCertificate.grid.Items);

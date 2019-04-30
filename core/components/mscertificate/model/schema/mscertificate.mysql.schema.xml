@@ -2,9 +2,16 @@
 <model package="mscertificate" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="mscertificate"
        version="1.1">
     <object class="mscCertificate" table="msc_certificates" extends="xPDOSimpleObject">
+        <field key="resource_id" dbtype="int" phptype="integer" null="true" default=""/>
         <field key="price_min" dbtype="smallint" phptype="integer" null="false" default="0"/>
         <field key="price_step" dbtype="smallint" phptype="integer" null="false" default="1"/>
         <field key="price_max" dbtype="smallint" phptype="integer" null="false" default="0"/>
         <field key="price_default" dbtype="smallint" phptype="integer" null="false" default="1"/>
+
+        <index alias="resource_id" name="resource_id" primary="false" unique="true" type="BTREE">
+            <column key="resource_id" collation="A" null="true" />
+        </index>
+
+        <aggregate alias="modResource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign"/>
     </object>
 </model>

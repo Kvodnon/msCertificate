@@ -13,8 +13,11 @@ class msCertificate
     function __construct(modX &$modx, array $config = [])
     {
         $this->modx =& $modx;
-        $corePath = MODX_CORE_PATH . 'components/mscertificate/';
-        $assetsUrl = MODX_ASSETS_URL . 'components/mscertificate/';
+        // $corePath = MODX_CORE_PATH . 'components/mscertificate/';
+        // $assetsUrl = MODX_ASSETS_URL . 'components/mscertificate/';
+
+        $corePath = $this->modx->getOption('msc_core_path');
+        $assetsUrl = $this->modx->getOption('msc_assets_url');
 
         $this->config = array_merge([
             'corePath' => $corePath,

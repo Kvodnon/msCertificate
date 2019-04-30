@@ -44,5 +44,5 @@ Ext.extend(msCertificate.combo.Search, Ext.form.TwinTriggerField, {
     },
 
 });
-Ext.reg('mscertificate-combo-search', msCertificate.combo.Search);
-Ext.reg('mscertificate-field-search', msCertificate.combo.Search);
+Ext.reg('msc-combo-search', msCertificate.combo.Search);
+Ext.reg('msc-field-search', msCertificate.combo.Search);

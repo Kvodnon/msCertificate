@@ -1,10 +1,10 @@
 msCertificate.window.CreateItem = function (config) {
     config = config || {};
     if (!config.id) {
-        config.id = 'mscertificate-item-window-create';
+        config.id = 'msc-item-window-create';
     }
     Ext.applyIf(config, {
-        title: _('mscertificate_item_create'),
+        title: _('msc_item_create'),
         width: 550,
         autoHeight: true,
         url: msCertificate.config.connector_url,
@@ -23,21 +23,21 @@ Ext.extend(msCertificate.window.CreateItem, MODx.Window, {
     getFields: function (config) {
         return [{
             xtype: 'textfield',
-            fieldLabel: _('mscertificate_item_name'),
+            fieldLabel: _('msc_item_name'),
             name: 'name',
             id: config.id + '-name',
             anchor: '99%',
             allowBlank: false,
         }, {
             xtype: 'textarea',
-            fieldLabel: _('mscertificate_item_description'),
+            fieldLabel: _('msc_item_description'),
             name: 'description',
             id: config.id + '-description',
             height: 150,
             anchor: '99%'
         }, {
             xtype: 'xcheckbox',
-            boxLabel: _('mscertificate_item_active'),
+            boxLabel: _('msc_item_active'),
             name: 'active',
             id: config.id + '-active',
             checked: true,
@@ -48,16 +48,16 @@ Ext.extend(msCertificate.window.CreateItem, MODx.Window, {
     }
 
 });
-Ext.reg('mscertificate-item-window-create', msCertificate.window.CreateItem);
+Ext.reg('msc-item-window-create', msCertificate.window.CreateItem);
 
 
 msCertificate.window.UpdateItem = function (config) {
     config = config || {};
     if (!config.id) {
-        config.id = 'mscertificate-item-window-update';
+        config.id = 'msc-item-window-update';
     }
     Ext.applyIf(config, {
-        title: _('mscertificate_item_update'),
+        title: _('msc_item_update'),
         width: 550,
         autoHeight: true,
         url: msCertificate.config.connector_url,
@@ -80,21 +80,21 @@ Ext.extend(msCertificate.window.UpdateItem, MODx.Window, {
             id: config.id + '-id',
         }, {
             xtype: 'textfield',
-            fieldLabel: _('mscertificate_item_name'),
+            fieldLabel: _('msc_item_name'),
             name: 'name',
             id: config.id + '-name',
             anchor: '99%',
             allowBlank: false,
         }, {
             xtype: 'textarea',
-            fieldLabel: _('mscertificate_item_description'),
+            fieldLabel: _('msc_item_description'),
             name: 'description',
             id: config.id + '-description',
             anchor: '99%',
             height: 150,
         }, {
             xtype: 'xcheckbox',
-            boxLabel: _('mscertificate_item_active'),
+            boxLabel: _('msc_item_active'),
             name: 'active',
             id: config.id + '-active',
         }];
@@ -104,4 +104,4 @@ Ext.extend(msCertificate.window.UpdateItem, MODx.Window, {
     }
 
 });
-Ext.reg('mscertificate-item-window-update', msCertificate.window.UpdateItem);
+Ext.reg('msc-item-window-update', msCertificate.window.UpdateItem);

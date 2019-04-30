@@ -1,9 +1,9 @@
 <?php
 
-class msCertificateItemGetProcessor extends modObjectGetProcessor
+class mscCertificatesItemGetProcessor extends modObjectGetProcessor
 {
-    public $objectType = 'msCertificateItem';
-    public $classKey = 'msCertificateItem';
+    public $objectType = 'mscCertificate';
+    public $classKey = 'mscCertificate';
     public $languageTopics = ['mscertificate:default'];
     //public $permission = 'view';
 
@@ -25,4 +25,4 @@ class msCertificateItemGetProcessor extends modObjectGetProcessor
 
 }
 
-return 'msCertificateItemGetProcessor';
+return 'mscCertificatesItemGetProcessor';

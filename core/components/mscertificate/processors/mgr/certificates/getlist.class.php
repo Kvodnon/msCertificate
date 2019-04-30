@@ -1,9 +1,9 @@
 <?php
 
-class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
+class mscCertificatesGetListProcessor extends modObjectGetListProcessor
 {
-    public $objectType = 'msCertificateItem';
-    public $classKey = 'msCertificateItem';
+    public $objectType = 'mscCertificate';
+    public $classKey = 'mscCertificate';
     public $defaultSortField = 'id';
     public $defaultSortDirection = 'DESC';
     //public $permission = 'list';
@@ -57,9 +57,9 @@ class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
         // Edit
         $array['actions'][] = [
             'cls' => '',
-            'icon' => 'fa fa-edit',
-            'title' => $this->modx->lexicon('mscertificate_item_update'),
-            //'multiple' => $this->modx->lexicon('mscertificate_items_update'),
+            'icon' => 'icon icon-edit',
+            'title' => $this->modx->lexicon('msc_item_update'),
+            //'multiple' => $this->modx->lexicon('msc_items_update'),
             'action' => 'updateItem',
             'button' => true,
             'menu' => true,
@@ -68,9 +68,9 @@ class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
         if (!$array['active']) {
             $array['actions'][] = [
                 'cls' => '',
-                'icon' => 'fa fa-power-off action-green',
-                'title' => $this->modx->lexicon('mscertificate_item_enable'),
-                'multiple' => $this->modx->lexicon('mscertificate_items_enable'),
+                'icon' => 'icon icon-power-off action-green',
+                'title' => $this->modx->lexicon('msc_item_enable'),
+                'multiple' => $this->modx->lexicon('msc_items_enable'),
                 'action' => 'enableItem',
                 'button' => true,
                 'menu' => true,
@@ -78,9 +78,9 @@ class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
         } else {
             $array['actions'][] = [
                 'cls' => '',
-                'icon' => 'fa fa-power-off action-gray',
-                'title' => $this->modx->lexicon('mscertificate_item_disable'),
-                'multiple' => $this->modx->lexicon('mscertificate_items_disable'),
+                'icon' => 'icon icon-power-off action-gray',
+                'title' => $this->modx->lexicon('msc_item_disable'),
+                'multiple' => $this->modx->lexicon('msc_items_disable'),
                 'action' => 'disableItem',
                 'button' => true,
                 'menu' => true,
@@ -90,9 +90,9 @@ class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
         // Remove
         $array['actions'][] = [
             'cls' => '',
-            'icon' => 'fa fa-trash-o action-red',
-            'title' => $this->modx->lexicon('mscertificate_item_remove'),
-            'multiple' => $this->modx->lexicon('mscertificate_items_remove'),
+            'icon' => 'icon icon-trash-o action-red',
+            'title' => $this->modx->lexicon('msc_item_remove'),
+            'multiple' => $this->modx->lexicon('msc_items_remove'),
             'action' => 'removeItem',
             'button' => true,
             'menu' => true,
@@ -103,4 +103,4 @@ class msCertificateOfficeItemGetListProcessor extends modObjectGetListProcessor
 
 }
 
-return 'msCertificateOfficeItemGetListProcessor';
+return 'mscCertificatesGetListProcessor';
