@@ -1,8 +1,10 @@
 msCertificate.window.CreateCertificate = function (config) {
     config = config || {};
+
     if (!config.id) {
         config.id = 'msc-certificate-window-create';
     }
+
     Ext.applyIf(config, {
         title: _('msc_certificate_create'),
         width: 550,
@@ -23,29 +25,13 @@ Ext.extend(msCertificate.window.CreateCertificate, MODx.Window, {
     getFields: function (config) {
         return [{
             xtype: 'textfield',
-            fieldLabel: _('msc_certificate_name'),
-            name: 'name',
-            id: config.id + '-name',
+            fieldLabel: _('msc_certificate_resource_id'),
+            name: 'resource_id',
+            id: config.id + '-resource_id',
             anchor: '99%',
-            allowBlank: false,
-        }, {
-            xtype: 'textarea',
-            fieldLabel: _('msc_certificate_description'),
-            name: 'description',
-            id: config.id + '-description',
-            height: 150,
-            anchor: '99%'
-        }, {
-            xtype: 'xcheckbox',
-            boxLabel: _('msc_certificate_active'),
-            name: 'active',
-            id: config.id + '-active',
-            checked: true,
+            allowBlank: true,
         }];
     },
-
-    loadDropZones: function () {
-    }
 
 });
 Ext.reg('msc-certificate-window-create', msCertificate.window.CreateCertificate);
@@ -99,9 +85,6 @@ Ext.extend(msCertificate.window.UpdateCertificate, MODx.Window, {
             id: config.id + '-active',
         }];
     },
-
-    loadDropZones: function () {
-    }
 
 });
 Ext.reg('msc-certificate-window-update', msCertificate.window.UpdateCertificate);
